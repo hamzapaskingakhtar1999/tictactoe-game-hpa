@@ -1,0 +1,52 @@
+.gameContainer {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    margin-top: 100px;
+
+}
+
+.container { /* For the overall container of the tictactoe board */
+    display: grid;
+    grid-template-columns: repeat(3,10vw);
+    grid-template-rows: repeat(3,10vw);
+    font-family: 'Roboto',sans-serif;
+}
+
+.box {
+    border: 2px solid black;
+    font-size: 8vw;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box:hover {
+    background-color: lightpink;
+}
+
+.gameInfo {
+    padding: 0 34px;
+}
+.imgbox iframe {
+    width: 0;
+    transition: width 1s ease-in-out;
+}
+
+#reset { /* for the reset button */
+    margin-top: 20px;
+    background-color: antiquewhite;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+@media screen and (max-width:800px) {
+    .gameContainer {
+        flex-wrap: wrap;
+    }
+    .container {
+        grid-template-columns: repeat(3,20vw);
+        grid-template-rows: repeat(3,20vw);
+    }
+}
